@@ -4,12 +4,11 @@ $(document).ready(function(){
 
     var experience = $("input:radio[name=experience]:checked").val();
     var interests = $("select#interests").val();
+    var color = $("#color").val();
     var transportation = $("input:radio[name=transportation]:checked").val();
-    $(':checkbox').map(function(){
-      return this.id;
-    }); alert(transportation).get().join(); 
+    var abilities = $("select#abilities").val();
+    var meals = $("select#meals").val();
 
-    //var expectations = $('input:checked')
+    });
+
   });
-  //alert(transportation);
-});
