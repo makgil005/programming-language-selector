@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.4.1.slim.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Programming Language Suggester</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to the Programming Language Suggester</h1>
+      <p>Are you interested in learning a programming language, but aren't sure where to start? Look no more! Just fill out the information below and get matched up with your most compatible programming language.</p>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text">
+        </div>
+        <div class="form-group">
+          <label for="experience">How much experience do you have as a programmer?</label>
+          <div class="radio">
+            <label>
+              <input type="radio" name="experience" value="None at all.">
+              None at all
+            </label>
+            <label>
+              <input type="radio" name="experience" value="Front-End">
+              Front-End
+            </label>
+            <label>
+              <input type="radio" name="experience" value="Back-End">
+              Back-End
+            </label>
+            <label>
+              <input type="radio" name="experience" value="Full-Stack">
+              Full-Stack
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="interests">What interests you the most? (Outside of programming of course!)</label>
+          <select name="interests">
+            <option value="draw/paint">Draw/Paint</option>
+            <option value="sports">Sports/Workout</option>
+            <option value="writing">Writing</option>
+            <option value="reading">Reading</option>
+            <option value="videogames">Video Games</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
