@@ -11,30 +11,36 @@
   <body>
     <div class="container">
       <h1>Welcome to the Programming Language Suggester</h1>
-      <p>Are you interested in learning a programming language, but aren't sure where to start? Look no more! Just fill out the information below and get matched up with your most compatible programming language.</p>
+      <p>Are you interested in learning a programming language, but aren't sure where to start? Look no more! Just fill out the information below and get matched up with your most compatible programming language. We select from the most used languages today!<a href="#"> (See our list)</a></p>
+      <ul id="list">
+        <li>Python</li>
+        <li>Swift</li>
+        <li>JavaScript</li>
+        <li>C#</li>
+      </ul>
 
       <form id="program">
         <div class="form-group">
           <label for="name">Name</label>
-          <input id="name" type="text">
+          <input id="user_name" type="text">
         </div>
         <div class="form-group">
           <label for="experience">How much experience do you have as a programmer?</label>
           <div class="radio" id=expierence>
             <label>
-              <input type="radio" name="experience" value="None at all.">
+              <input type="radio" name="experience" value="0">
               None at all
             </label>
             <label>
-              <input type="radio" name="experience" value="Front-End">
+              <input type="radio" name="experience" value="1">
               Front-End
             </label>
             <label>
-              <input type="radio" name="experience" value="Back-End">
+              <input type="radio" name="experience" value="2">
               Back-End
             </label>
             <label>
-              <input type="radio" name="experience" value="Full-Stack">
+              <input type="radio" name="experience" value="3">
               Full-Stack
             </label>
           </div>
@@ -42,12 +48,12 @@
         <div class="form-group">
           <label for="interests">What interests you the most? (Outside of programming of course!)</label><br>
           <select name="interests" id="interests">
-            <option> </option>
-            <option>Draw/Paint</option>
-            <option>Sports/Workout</option>
-            <option>Writing</option>
-            <option>Reading</option>
-            <option>Video Games</option>
+            <option value="0"> </option>
+            <option value="1">Draw/Paint</option>
+            <option value="2">Sports/Workout</option>
+            <option value="3">Writing</option>
+            <option value="4">Reading</option>
+            <option value="5">Video Games</option>
           </select>
         </div>
         <div class="form-group">
@@ -78,10 +84,11 @@
         <div class="form-group">
           <label for="expect">What new abilities would you like to gain from learning this programming language?</label><br>
           <select name="expectations" id="abilities">
-            <option> </option>
-            <option>I want to make apps</option>
-            <option>I want to make anything I develop look professional</option>
-            <option>I want to learn the newest concepts to programming.</option>
+            <option value="0"> </option>
+            <option value="1">I want to make webpages.</option>
+            <option value="2">I want to make apps.</option>
+            <option value="3">I want to make anything I develop look professional.</option>
+            <option value="4">I want to learn the newest concepts to programming.</option>
           </select>
         </div>
         <div class="form-group">
@@ -98,7 +105,7 @@
       </form>
 
       <div id="program-pair">
-        <h2>Based on what we know about you, we suggest that you learn <span id="result"></span>.</h2>
+        <h2>Congratulations<span id="name"></span>, with the information you have provided we have matched you with the perfect Programming Language. Based on your current interests and future goals we suggest that you learn <span id=result></span>.Read more about your paired language below: <span id="result-info"></span></h2>
       </div>
     </div>
   </body>
