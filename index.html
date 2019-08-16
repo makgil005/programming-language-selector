@@ -13,7 +13,7 @@
       <h1>Welcome to the Programming Language Suggester</h1>
       <p>Are you interested in learning a programming language, but aren't sure where to start? Look no more! Just fill out the information below and get matched up with your most compatible programming language.</p>
 
-      <form>
+      <form id="program">
         <div class="form-group">
           <label for="name">Name</label>
           <input id="name" type="text">
@@ -22,26 +22,26 @@
           <label for="experience">How much experience do you have as a programmer?</label>
           <div class="radio">
             <label>
-              <input type="radio" name="experience" value="None at all.">
+              <input type="radio" id="experience" name="experience" value="None at all.">
               None at all
             </label>
             <label>
-              <input type="radio" name="experience" value="Front-End">
+              <input type="radio" id="experience" name="experience" value="Front-End">
               Front-End
             </label>
             <label>
-              <input type="radio" name="experience" value="Back-End">
+              <input type="radio" id="experience" name="experience" value="Back-End">
               Back-End
             </label>
             <label>
-              <input type="radio" name="experience" value="Full-Stack">
+              <input type="radio" id="experience" name="experience" value="Full-Stack">
               Full-Stack
             </label>
           </div>
         </div>
         <div class="form-group">
           <label for="interests">What interests you the most? (Outside of programming of course!)</label><br>
-          <select name="interests">
+          <select name="interests" id="interests">
             <option value="draw/paint">Draw/Paint</option>
             <option value="sports">Sports/Workout</option>
             <option value="writing">Writing</option>
@@ -51,7 +51,7 @@
         </div>
         <div class="form-group">
           <label for="transportation">Describe your source of transportation:</label>
-          <div class="radio">
+          <div class="radio" id="transportation">
             <label>
               <input type="radio" name="transportation" value="Car">
               Car
@@ -71,11 +71,13 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="expect">What new abilities would you like to gain from learning this programming language?(Check all that apply.)</label><br>
-          <input type="checkbox" name="expect" value="Web Development"> I want to make webpages<br>
-          <input type="checkbox" name="expect" value="App Development"> I want to make apps<br>
-          <input type="checkbox" name="expect" value="Style"> I want to make anything I develop look professional<br>
-          <input type="checkbox" name="expect" value="New"> I want to learn the newest concepts to programming. <br>
+          <div id="expectations">
+            <label for="expect">What new abilities would you like to gain from learning this programming language?(Check all that apply.)</label><br>
+            <input type="checkbox" name="expect" value="Web Development"> I want to make webpages<br>
+            <input type="checkbox" name="expect" value="App Development"> I want to make apps<br>
+            <input type="checkbox" name="expect" value="Style"> I want to make anything I develop look professional<br>
+            <input type="checkbox" name="expect" value="New"> I want to learn the newest concepts to programming. <br>
+          </div>
         </div>
         <div class="form-group">
           <label for="meals">Select your favorite meal of the day:</label>
@@ -86,7 +88,12 @@
               <option value="snacks">I'm a snacker!</option>
             </select>
         </div>
+        <button type="submit" class="btn">Match me with a programming language</button>
       </form>
+
+      <div id="program-pair">
+        <h2>Based on what we know about you, we suggest that you learn <span id="result"></span>.</h2>
+      </div>
     </div>
   </body>
 </html>
