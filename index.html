@@ -28,7 +28,7 @@
         <form id="program">
           <div class="form-group">
             <label for="name">Name</label>
-            <input id="user_name" type="text">
+            <input id="user_name" type="text" required>
           </div>
           <div class="form-group">
             <label for="experience">How much experience do you have as a programmer?</label>
@@ -63,7 +63,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="color">Choose your favorite color from the wheel:</label>
+            <label for="color">Choose your favorite color:</label>
             <input id ="color" class="form-control" type="color">
           </div>
           <div class="form-group">
@@ -89,7 +89,7 @@
           </div>
           <div class="form-group">
             <label for="expect">What new abilities would you like to gain from learning this programming language?</label><br>
-            <select name="expectations" id="abilities">
+            <select name="expectations" id="abilities" required>
               <option value="0"> </option>
               <option value="1">I want to make webpages.</option>
               <option value="2">I want to make apps.</option>
@@ -109,13 +109,14 @@
             </select>
         </div>
         </div>
-        <button type="submit" class="btn btn-success">Match me with a programming language</button>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success">Match me with a programming language</button>
+        </div>
       </form>
-
       <div id="program-pair">
-        <h3>Congratulations <span id="name"></span>, with the information you have provided we have matched you with the perfect Programming Language.</h3><p> Based on your current interests and future goals we suggest that you learn <span id="result">result</span>. Read more about your paired language by following the link below:</p><br>
-        <div id=result-info>
-          <ul>
+        <div class="jumbotron">
+          <h3>Congratulations <span id="name"></span>, with the information you have provided we have matched you with the perfect Programming Language.</h3></jumbotron><p>Based on your current interests and future goals we suggest that you learn <span id="result">result</span>. Read more about your paired language by following the link below:</p><br>
+          <ul id=result-info>
             <li><a href="https://www.python.org/">Python</li></a>
             <li><a href="https://developer.apple.com/swift/">Swift</li></a>
             <li><a href="https://www.javascript.com/">JavaScript</li></a>
