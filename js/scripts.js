@@ -28,4 +28,7 @@ $(document).ready(function(){
 
     event.preventDefault();
     });
+    $("span#show-list").click(function(){
+      $("ul#list").toggle();
+    });
   });

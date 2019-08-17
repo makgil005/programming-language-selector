@@ -10,87 +10,94 @@
   </head>
   <body>
     <div class="container">
-      <h1>Welcome to the Programming Language Suggester</h1>
-      <p>Are you interested in learning a programming language, but aren't sure where to start? Look no more! Just fill out the information below and get matched up with your most compatible programming language. We select from the most used languages today! <a href="#"> (See our list)</a></p>
-      <ul id="list">
-        <li>Python</li>
-        <li>Swift</li>
-        <li>JavaScript</li>
-        <li>C#</li>
-      </ul>
+      <div class="jumbotron">
+        <h1>Welcome to the Programming Language Suggester</h1>
+        <p>Are you interested in learning a programming language, but aren't sure where to start? Look no more! Just fill out the information below and get matched up with your most compatible programming language. We select from the most used languages today! <span id="show-list">(See our list)</span></p>
+        <ul id="list">
+          <li>Python</li>
+          <li>Swift</li>
+          <li>JavaScript</li>
+          <li>C#</li>
+        </ul>
+      </div>
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h5 class="panel-title">Please fill out the information below!</h5>
+        </div>
+        <div class="panel-body">
+        <form id="program">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="user_name" type="text">
+          </div>
+          <div class="form-group">
+            <label for="experience">How much experience do you have as a programmer?</label>
+            <div class="radio" id=expierence>
+              <label>
+                <input type="radio" name="experience" value="0">
+                None at all
+              </label>
+              <label>
+                <input type="radio" name="experience" value="1">
+                Front-End
+              </label>
+              <label>
+                <input type="radio" name="experience" value="2">
+                Back-End
+              </label>
+              <label>
+                <input type="radio" name="experience" value="3">
+                Full-Stack
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="interests">What interests you the most? (Outside of programming of course!)</label><br>
+            <select name="interests" id="interests">
+              <option value="0"> </option>
+              <option value="1">Draw/Paint</option>
+              <option value="2">Sports/Workout</option>
+              <option value="3">Writing</option>
+              <option value="4">Reading</option>
+              <option value="5">Video Games</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="color">Choose your favorite color from the wheel:</label>
+            <input id ="color" class="form-control" type="color">
+          </div>
+          <div class="form-group">
+            <label for="transportation">Describe your source of transportation:</label>
+            <div class="radio">
+              <label>
+                <input type="radio" name="transportation" value="Car">
+                Car
+              </label>
+              <label>
+                <input type="radio" name="transportation" value="Carpool/Rideshare">
+                Carpool/Rideshare
+              </label>
+              <label>
+                <input type="radio" name="transportation" value="Bike">
+                Bike/Hoverboard
+              </label>
+              <label>
+                <input type="radio" name="transportation" value="Bus/Train">
+                Bus/Train
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="expect">What new abilities would you like to gain from learning this programming language?</label><br>
+            <select name="expectations" id="abilities">
+              <option value="0"> </option>
+              <option value="1">I want to make webpages.</option>
+              <option value="2">I want to make apps.</option>
+              <option value="3">I want to make anything I develop look professional.</option>
+              <option value="4">I want to learn the newest concepts to programming.</option>
+            </select>
+          </div>
 
-      <form id="program">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input id="user_name" type="text">
-        </div>
-        <div class="form-group">
-          <label for="experience">How much experience do you have as a programmer?</label>
-          <div class="radio" id=expierence>
-            <label>
-              <input type="radio" name="experience" value="0">
-              None at all
-            </label>
-            <label>
-              <input type="radio" name="experience" value="1">
-              Front-End
-            </label>
-            <label>
-              <input type="radio" name="experience" value="2">
-              Back-End
-            </label>
-            <label>
-              <input type="radio" name="experience" value="3">
-              Full-Stack
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="interests">What interests you the most? (Outside of programming of course!)</label><br>
-          <select name="interests" id="interests">
-            <option value="0"> </option>
-            <option value="1">Draw/Paint</option>
-            <option value="2">Sports/Workout</option>
-            <option value="3">Writing</option>
-            <option value="4">Reading</option>
-            <option value="5">Video Games</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="color">Choose your favorite color from the wheel:</label>
-          <input id ="color" class="form-control" type="color">
-        </div>
-        <div class="form-group">
-          <label for="transportation">Describe your source of transportation:</label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="transportation" value="Car">
-              Car
-            </label>
-            <label>
-              <input type="radio" name="transportation" value="Carpool/Rideshare">
-              Carpool/Rideshare
-            </label>
-            <label>
-              <input type="radio" name="transportation" value="Bike">
-              Bike/Hoverboard
-            </label>
-            <label>
-              <input type="radio" name="transportation" value="Bus/Train">
-              Bus/Train
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="expect">What new abilities would you like to gain from learning this programming language?</label><br>
-          <select name="expectations" id="abilities">
-            <option value="0"> </option>
-            <option value="1">I want to make webpages.</option>
-            <option value="2">I want to make apps.</option>
-            <option value="3">I want to make anything I develop look professional.</option>
-            <option value="4">I want to learn the newest concepts to programming.</option>
-          </select>
-        </div>
         <div class="form-group">
           <label for="meals">Select your favorite meal of the day:</label>
             <select name="meals" id="meals">
@@ -101,7 +108,8 @@
               <option value="snacks">I'm a snacker!</option>
             </select>
         </div>
-        <button type="submit" class="btn">Match me with a programming language</button>
+        </div>
+        <button type="submit" class="btn btn-success">Match me with a programming language</button>
       </form>
 
       <div id="program-pair">
